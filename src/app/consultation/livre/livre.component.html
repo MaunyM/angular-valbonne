@@ -1,4 +1,4 @@
-<p>
+<p *ngIf="livre">
   Livre : {{livre.titre}}
   <ng-container *ngIf="livre.auteur"> par {{livre.auteur}}</ng-container>
 </p>

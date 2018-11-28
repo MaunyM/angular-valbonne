@@ -1,0 +1,9 @@
+<app-livre
+  [livre]="patate"
+  *ngFor="let patate of livres"
+  (mouseover)="onClick(patate)"
+></app-livre>
+<ng-container *ngIf="livreSelectionne">
+  Vous avez cliqué sur :
+  {{livreSelectionne.titre}} by {{livreSelectionne.auteur}}
+</ng-container>

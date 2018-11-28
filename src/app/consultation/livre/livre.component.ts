@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Livre } from 'src/app/shared/livre';
 import { LivreService } from 'src/app/shared/livre.service';
 
@@ -8,11 +8,8 @@ import { LivreService } from 'src/app/shared/livre.service';
   styleUrls: ['./livre.component.css']
 })
 export class LivreComponent implements OnInit {
-  livre: Livre;
-
-  constructor(private patate: LivreService) {}
+  @Input() livre: Livre;
 
   ngOnInit() {
-    this.livre = this.patate.recuperer();
   }
 }
