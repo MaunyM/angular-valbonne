@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Livre } from 'src/app/livre';
+import { Livre } from 'src/app/shared/livre';
 
 @Component({
   selector: 'app-livre',
@@ -7,11 +7,7 @@ import { Livre } from 'src/app/livre';
   styleUrls: ['./livre.component.css']
 })
 export class LivreComponent implements OnInit {
-  livre: Livre = {
-    auteur : 'Hugo',
-    titre : 'Quatre-vingt-treize',
-    parution : 1874
-  };
+  livre: Livre;
 
   constructor() {
 
