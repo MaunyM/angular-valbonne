@@ -17,7 +17,7 @@ export class ConsultationListeLivresComponent implements OnInit {
     this.livres = this.service.recupererTous();
   }
 
-  onClick(livreClique: Livre): void {
-    this.livreSelectionne = livreClique;
+  onClick(event: any): void {
+    console.log(event);
   }
 }

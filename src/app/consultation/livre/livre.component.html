@@ -1,4 +1,4 @@
 <p *ngIf="livre">
-  Livre : {{livre.titre}}
+  <span (click)=onTitreClicked()>Livre : {{livre.titre}}</span>
   <ng-container *ngIf="livre.auteur"> par {{livre.auteur}}</ng-container>
 </p>
