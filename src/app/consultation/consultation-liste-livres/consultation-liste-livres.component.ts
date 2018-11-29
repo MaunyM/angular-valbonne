@@ -14,7 +14,7 @@ export class ConsultationListeLivresComponent implements OnInit {
   constructor(private service: LivreService) { }
 
   ngOnInit() {
-    this.livres = this.service.recupererTous();
+    this.service.recupererTous().subscribe(reponse => this.livres = reponse);
   }
 
   onClick(event: any): void {

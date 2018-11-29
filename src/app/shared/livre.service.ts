@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Livre } from './livre';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -7,7 +9,7 @@ import { Livre } from './livre';
 })
 export class LivreService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   recuperer(): Livre {
     return {
@@ -17,21 +19,7 @@ export class LivreService {
     };
   }
 
-  recupererTous(): Livre[] {
-    return [{
-      auteur : 'Hugo',
-      titre : 'Quatre-vingt-treize',
-      parution : 1874
-    },
-    {
-      auteur : 'Hugo',
-      titre : 'Quatre-vingt-quatorze',
-      parution : 1876
-    },
-    {
-      titre : 'Quatre-vingt-Quinze',
-      parution : 1878
-    }
-  ];
+  recupererTous(): Observable<Livre[]> {
+    return this.http.get<Livre[]>('api/books');
   }
 }
