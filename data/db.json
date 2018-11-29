@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id":1,
+      "titre": "Quatre-vingt-Treize",
+      "auteur": "Hugo",
+      "parution": 1874
+    },
+    {
+      "id" :2,
+      "titre": "Quatre-vingt-Quatorze",
+      "auteur": "Hugo Junior"
+    },
+    {
+      "id":3,
+      "titre": "Les miserables",
+      "auteur": "Hugo",
+      "parution": 1862
+    }
+
+  ]
+}
