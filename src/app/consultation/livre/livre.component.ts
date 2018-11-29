@@ -9,12 +9,12 @@ import { LivreService } from 'src/app/shared/livre.service';
 })
 export class LivreComponent implements OnInit {
   @Input() livre: Livre;
-  @Output() titreClick: EventEmitter<string> = new EventEmitter();
+  @Output() titreClick: EventEmitter<number> = new EventEmitter();
 
   ngOnInit() {
   }
 
   onTitreClicked(): void {
-    this.titreClick.emit(this.livre.titre);
+    this.titreClick.emit(this.livre.id);
   }
 }

@@ -7,3 +7,7 @@
   Vous avez cliqué sur :
   {{livreSelectionne.titre}} by {{livreSelectionne.auteur}}
 </ng-container>
+<ng-container *ngIf="!livres">
+  Chargement...
+</ng-container>
+

@@ -11,12 +11,8 @@ export class LivreService {
 
   constructor(private http: HttpClient) { }
 
-  recuperer(): Livre {
-    return {
-      auteur : 'Hugo',
-      titre : 'Quatre-vingt-treize',
-      parution : 1874
-    };
+  recuperer(id: number): Observable<Livre> {
+    return this.http.get<Livre>(`/api/books/${id}`);
   }
 
   recupererTous(): Observable<Livre[]> {
