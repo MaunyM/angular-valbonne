@@ -8,16 +8,19 @@ import { BienvenueComponent } from './bienvenue/bienvenue.component';
 import { HeaderComponent } from './header/header.component';
 import { ConsultationModule } from './consultation/consultation.module';
 import { ConsultationRootComponent } from './consultation/consultation-root/consultation-root.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path : 'consultation', component: ConsultationRootComponent}
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     BienvenueComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     ConsultationModule,
