@@ -1,8 +1,10 @@
+<ng-container *ngFor="let patate of livres">
 <app-livre
   [livre]="patate"
-  *ngFor="let patate of livres"
   (titreClick)="onClick($event)"
 ></app-livre>
+<button [routerLink]="['livre',patate.id]">Détail</button>
+</ng-container>
 <ng-container *ngIf="livreSelectionne">
   Vous avez cliqué sur :
   {{livreSelectionne.titre}} by {{livreSelectionne.auteur}}
