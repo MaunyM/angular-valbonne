@@ -11,7 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
  {
-   path: 'patate',
+   path: 'administration',
    loadChildren: './administration/administration.module#AdministrationModule'
 },
 {

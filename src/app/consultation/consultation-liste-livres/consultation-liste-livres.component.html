@@ -4,6 +4,7 @@
   (titreClick)="onClick($event)"
 ></app-livre>
 <button [routerLink]="['livre',patate.id]">Détail</button>
+<button [routerLink]="['/administration','editer',patate.id]">Modifier</button>
 </ng-container>
 <ng-container *ngIf="livreSelectionne">
   Vous avez cliqué sur :

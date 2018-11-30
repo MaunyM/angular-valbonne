@@ -18,4 +18,16 @@ export class LivreService {
   recupererTous(): Observable<Livre[]> {
     return this.http.get<Livre[]>('api/books');
   }
+
+  creer(livre: Livre): Observable<Livre> {
+    return this.http.post<Livre>('api/books', livre);
+  }
+
+  creerOuMettreAJour(livre: Livre): Observable<Livre> {
+    return livre.id ? this.mettreAJour(livre) : this.creer(livre);
+  }
+
+  mettreAJour(livre: Livre): Observable<Livre> {
+    return this.http.put<Livre>(`api/books/${livre.id}`, livre);
+  }
 }

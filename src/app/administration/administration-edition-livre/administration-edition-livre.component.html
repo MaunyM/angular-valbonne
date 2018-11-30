@@ -1,3 +1,10 @@
-<p>
-  administration-edition-livre works!
-</p>
+<ng-container *ngIf = (modification)>
+  <h3>Modification</h3>
+</ng-container>
+<form (ngSubmit)="onSubmit()">
+  <label for="titre">Titre :</label>
+  <input name="titre" [(ngModel)]="livre.titre" required/>
+  <label for="auteur">Auteur :</label>
+  <input name="auteur" [(ngModel)]="livre.auteur"/>
+  <button type="submit">Zou</button>
+</form>

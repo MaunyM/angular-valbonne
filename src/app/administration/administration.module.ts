@@ -4,14 +4,20 @@ import { AdministrationRootComponent } from './administration-root/administratio
 import { Routes, RouterModule } from '@angular/router';
 import { AdministrationHeaderComponent } from './administration-header/administration-header.component';
 import { AdministrationEditionLivreComponent } from './administration-edition-livre/administration-edition-livre.component';
+import { FormsModule} from '@angular/forms';
 
 const routes: Routes = [
+  { path : 'editer/:id', component : AdministrationRootComponent},
   { path : '', component : AdministrationRootComponent}
 ];
 
 @NgModule({
-  declarations: [AdministrationRootComponent, AdministrationHeaderComponent, AdministrationEditionLivreComponent],
+  declarations: [
+    AdministrationRootComponent,
+    AdministrationHeaderComponent,
+    AdministrationEditionLivreComponent],
   imports: [
+    FormsModule,
     RouterModule.forChild(routes),
     CommonModule
   ]
